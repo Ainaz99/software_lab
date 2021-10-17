@@ -62,10 +62,18 @@ def print_log(k, distance_metric, all_results, text_operation):
     result = []
     for i in range(len(all_results)):
         result.append((all_results[i][0], numpy.bincount(all_results[i][1][:k]).argmax()))
+
+    for i in range(len(all_results)):
+        result.append((all_results[i][0], numpy.bincount(all_results[i][1][:k]).argmax()))
+
     print('K-Nearest Neighbours:')
+    print('changedddddddddddddd')
     print('\tK: ' + str(k))
+    print('changedddddddddddddd')
     print('\tText Operation: ' + text_operation)
+    print('changedddddddddddddd')
     print('\tDistance Metric: ' + distance_metric)
+    print('changedddddddddddddd')
     evaluation(result)
 
 
