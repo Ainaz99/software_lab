@@ -17,9 +17,9 @@ with open(training_data_path) as training_data_file:
 with open(test_data_path) as test_data_file:
     test_data = json.loads(test_data_file.read())
 
-# NaiveBayes.run(training_data, test_data, 1, 'none')
-# NaiveBayes.find_best_hyper_parameter(training_data, test_data, [0.25, 1, 4], 'none')
-# NaiveBayes.check_text_operations_effects(training_data, test_data, 1)
+NaiveBayes.run(training_data, test_data, 1, 'none')
+NaiveBayes.find_best_hyper_parameter(training_data, test_data, [0.25, 1, 4], 'none')
+NaiveBayes.check_text_operations_effects(training_data, test_data, 1)
 
 # KNN.run(training_data[:int(len(training_data) / 2)], test_data[:int(len(test_data) / 2)], 1, 'cosine similarity', 'none')
 # KNN.run(training_data[:int(len(training_data) / 2)], test_data[:int(len(test_data) / 2)], 1, 'euclidean distance', 'none')
